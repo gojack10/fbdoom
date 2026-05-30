@@ -1,0 +1,42 @@
+# Build outputs
+doom
+doom_mac
+*.o
+libaudiowrapper.so
+
+# JVM crash logs from Java AudioTrack probes
+hs_err_pid*.log
+
+# Full upstream FluidSynth distribution copy (not used by build)
+fluidsynth_src/
+
+# Test harness binaries (source files kept, but they're debris now too)
+test_*
+probe_*
+fbtest
+doomtest
+touchtest
+multitouch_probe
+audio_player
+alsa_ctl
+tools/sf2_play
+tools/test_sf2_lookup
+
+# Compiled tool binaries (sources kept)
+render_e1m2
+doom_stripped
+tools/dump_banks
+tools/dump_sf2
+tools/dump_zones
+tools/render_e1m2
+
+# Previously committed binary, now untracked
+tools/play_e1m2
+
+*.dSYM
+/tmp/doom_render
+
+# Generated audio assets for Android port (too large for git)
+music/
+music.tar.gz
+*.pcm
