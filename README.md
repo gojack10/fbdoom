@@ -1,7 +1,18 @@
-# Doom for Linux Frambuffer
+# Fork: Jack ten Bosch  Android fbDOOM Port
 
-This port of the original Doom source code targets Linux Framebuffer, without any intermediate abstraction layer (like SDL).
+Fork of stoffera/fbdoom. I added:
 
-There is no keyboard input, sound or music - you can only watch the demo screen running in the framebuffer. Further, no scaling is implemented - resolution is the original Doom screen resolution.
+- Android framebuffer and audio device integration
+  - Cross-compile and build system changes so fbDOOM runs on Android ARM.
+  - Framebuffer display power handling and audioflinger wrapper.
+- FluidSynth music pipeline
+  - Integrated FluidSynth library, pre-rendered PCM music backend, and offline render tooling.
+  - My review: PCM pre-render works on-device and avoids runtime FluidSynth cost.
+- Sound and menu fixes
+  - SFX volume scaling, gain handling, automap key mapping, Y/N menu confirmations.
+  - Tested on physical device.
 
-This port depends only on *stdlib*.
+Generated audio assets are not in this branch. They are build artifacts and too large for git.
+
+---
+
